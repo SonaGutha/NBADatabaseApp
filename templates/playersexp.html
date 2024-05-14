@@ -1,0 +1,38 @@
+{% include "mainheader.html" %}
+    <div class="container">
+        <span>Experienced Players Distribution</span>
+    </div>
+    <div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>TeamID</th>
+                    <th>Player ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Experience</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for playersexp in playersexp %}
+                <tr>
+                    <td>{{ playersexp[0] }}</td>
+                    <td>{{ playersexp[1] }}</td>
+                    <td>{{ playersexp[2] }}</td>
+                    <td>{{ playersexp[3] }}</td>
+                    <td>{{ playersexp[4] }}</td>
+                    <td>{{ playersexp[5] }}</td>
+                    <td>{{ playersexp[6] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- <h2>Add User</h2> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA DATA</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<style>
+    body {
+    background-color: #312e2e;
+    color: #ffffff; /* Text color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            margin-right: 100px; /* Adjust as needed for spacing between logo and buttons */
+        }
+h1 {
+    color: #ffcc00; /* Header text color */
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.topnav {
+            background-color: #e8dddd; /* Choose a color for the top navigation bar */
+            overflow: visible;
+        }
+
+        .topnav button {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 1px 10px;
+            text-decoration: none;
+        }
+
+        .topnav button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+button {
+    background-color: #0c0c0c; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+#scroll-container {
+  border: 1px solid rgba(32, 29, 29, 0.042);
+  border-radius: 7px;
+  overflow: hidden;
+  width: 800px;
+}
+
+#scroll-text {
+    font-size: x-large;
+    font-weight: 500;
+    color: #ffcc00;
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+</style>
+<body>
+    <div class="logo-container"></div>
+        <!-- <img src="logo-nba.svg" alt="Logo" width="50" height="50"> -->
+        <img src="{{ url_for('static', filename='/images/logo-nba.svg') }}" alt="Logo" width="50" height="50">
+    </div>
+    
+
+    <div class="topnav">
+        <button onclick="navigateTo('')">Home</button>
+        <button onclick="navigateTo('teams')">Teams</button>
+        <button onclick="navigateTo('games')">Games</button>
+        <button onclick="navigateTo('players')">Players</button>
+        <button onclick="navigateTo('standings')">Standings</button>
+        <button onclick="navigateTo('news')">News</button>
+        <button onclick="navigateTo('schedules')">Schedules</button>
+        <button onclick="navigateTo('login')">Admin</button>
+        <button onclick="navigateTo('analytics')">Analytics</button>
+    </div>
+-
+    <script>
+        function navigateTo(page) {
+            // You can use window.location.href to navigate to the corresponding Flask route
+            window.location.href = `/${page}`;
+        }
+    </script>

@@ -1,0 +1,29 @@
+{% include "mainheader.html" %}
+    <div class="container">
+        <span>Team Average</span>
+    </div>
+    <div>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>TeamID</th>
+                    <th>Average Height</th>
+                    <th>Average Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teamavg in teamavg %}
+                <tr>
+                    <td>{{ teamavg[0] }}</td>
+                    <td>{{ teamavg[1] }}</td>
+                    <td>{{ teamavg[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+
+</html>

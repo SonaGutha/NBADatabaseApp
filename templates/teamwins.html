@@ -1,0 +1,31 @@
+{% include "mainheader.html" %}
+    <div class="container">
+        <span>Team Win Analytics</span>
+        </div>
+        <div class="container">
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Season</th>
+                    <th>City</th>
+                    <th>Total Wins</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teamwins in teamwins %}
+                <tr>
+                    <td>{{ teamwins[0] }}</td>
+                    <td>{{ teamwins[1] }}</td>
+                    <td>{{ teamwins[2] }}</td>
+                    <td>{{ teamwins[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

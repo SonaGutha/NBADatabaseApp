@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body> -->
+    {% include "mainheader.html" %}
+    <div class="container">
+        <span>Team Details</span>
+        </div>
+        <div class="container">
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>TeamID</th>
+                    <th>TeamName</th>
+                    <th>HeadCoach</th>
+                    <th>City</th>
+                    <th>GeneralManager</th>
+                    <th>AssistantCoach</th>
+                    <th>Founded</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teams in teams %}
+                <tr>
+                    <td>{{ teams[0] }}</td>
+                    <td>{{ teams[1] }}</td>
+                    <td>{{ teams[2] }}</td>
+                    <td>{{ teams[3] }}</td>
+                    <td>{{ teams[4] }}</td>
+                    <td>{{ teams[5] }}</td>
+                    <td>{{ teams[6] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- <h2>Add User</h2> -->
+
+    </div>
+</body>
+
+</html>

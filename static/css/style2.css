@@ -1,0 +1,131 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f4f4f4; */
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('../images/1.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    opacity: 1;
+}
+
+body::after {
+    right: 0;
+    opacity: 0;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: #fff; */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+h1,
+h2 {
+    color: rgb(245, 232, 225);
+    transition: color 0.3s ease;
+}
+
+h3 {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid rgb(193, 192, 133);
+    padding: 10px;
+    text-align: left;
+}
+
+.add-user-form {
+    margin-top: 20px;
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(173, 178, 131);
+    transition: color 0.3s ease;
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(173, 178, 131);
+    transition: color 0.3s ease;
+}
+
+.add-user-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-form button {
+    background-color: #007bff;
+    color: rgba(255, 255, 255, 0.284);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-form button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: palevioletred;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #0056b3;
+}
+
+/* Hover effect for table rows */
+.user-table tbody tr:hover {
+    background-color: #665252;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    color: rgb(174, 177, 130);
+}
+
+td {
+    color: #e0d27f;
+}

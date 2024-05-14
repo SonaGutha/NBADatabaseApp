@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body> -->
+    {% include "mainheader.html" %}
+    <div class="container">
+        <span>Player Details</span>
+    </div>
+    <div class="container">
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Position</th>
+                    <th>DOB</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Country</th>
+                    <th>Experience</th>
+                    <th>TeamID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for players in players %}
+                <tr>
+                    <td>{{ players[1] }}</td>
+                    <td>{{ players[2] }}</td>
+                    <td>{{ players[3] }}</td>
+                    <td>{{ players[4] }}</td>
+                    <td>{{ players[5] }}</td>
+                    <td>{{ players[6] }}</td>
+                    <td>{{ players[7] }}</td>
+                    <td>{{ players[8] }}</td>
+                    <td>{{ players[9] }}</td>
+                    <td>{{ players[10] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- <h2>Add User</h2> -->
+    </div>
+</body>
+
+</html>

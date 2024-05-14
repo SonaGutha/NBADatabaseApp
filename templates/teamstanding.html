@@ -1,0 +1,29 @@
+{% include "mainheader.html"%}
+    <div class = "container2">
+    <h1>Select Season</h1>
+    </div>
+    <div>
+    <form action="/teamstandingsresult" method="post">
+        <label for="Season Begin Year">
+            <h3>Season Begin Year</h3>
+        </label>
+        <select id="year1" name="year1">
+            {% for option in year1 %}
+            <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <label for="Season End Year">
+            <h3>Season End Year</h3>
+        </label>
+        <select id="year2" name="year2">
+            {% for option in year2 %}
+            <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+
+</html>

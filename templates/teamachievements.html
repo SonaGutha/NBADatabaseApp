@@ -1,0 +1,38 @@
+{% include "mainheader.html" %}
+    <div class="container">
+        <span>Team Achievements</span>
+        </div>
+        <div>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>TeamID</th>
+                    <th>Achievement Type</th>
+                    <th>Team Name</th>
+                    <th>Head Coach</th>
+                    <th>City</th>
+                    <th>General Manager</th>
+                    <th>Assistant Coach</th>
+                    <th>Founded</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teamwincomparision in teamachievements %}
+                <tr>
+                    <td>{{ teamwincomparision[0] }}</td>
+                    <td>{{ teamwincomparision[1] }}</td>
+                    <td>{{ teamwincomparision[2] }}</td>
+                    <td>{{ teamwincomparision[3] }}</td>
+                    <td>{{ teamwincomparision[4] }}</td>
+                    <td>{{ teamwincomparision[5] }}</td>
+                    <td>{{ teamwincomparision[6] }}</td>
+                    <td>{{ teamwincomparision[7] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

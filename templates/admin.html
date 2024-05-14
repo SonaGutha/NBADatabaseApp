@@ -1,0 +1,20 @@
+{% include "mainheader.html" %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+</head>
+<body>
+    <h2>Select an Option:</h2>
+    <form action="/process" method="post">
+        <label for="options">Options:</label>
+        <select id="options" name="options">
+            {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

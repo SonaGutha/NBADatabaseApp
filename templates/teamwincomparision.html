@@ -1,0 +1,37 @@
+{% include "mainheader.html" %}
+    <div class="container">
+        <span>Team Win Comparision</span>
+    </div>
+    <div>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>TeamID</th>
+                    <th>Wins</th>
+                    <th>Win Percentage</th>
+                    <th>Road</th>
+                    <th>Last10</th>
+                    <th>Season</th>
+                    <th>Conf</th>
+                    <th>Division</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comparision in teamwincomparision %}
+                <tr>
+                    <td>{{ comparision[0] }}</td>
+                    <td>{{ comparision[1] }}</td>
+                    <td class = 'rounded'>{{ comparision[2] }}</td>
+                    <td>{{ comparision[3] }}</td>
+                    <td>{{ comparision[4] }}</td>
+                    <td>{{ comparision[5] }}</td>
+                    <td>{{ comparision[6] }}</td>
+                    <td>{{ comparision[7] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

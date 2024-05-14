@@ -1,0 +1,21 @@
+{% include "mainheader.html" %}
+<div>
+    <h1>Select Team:</h1>
+</div>
+<div>
+    <form action="/result" method="post">
+        <label for="teams">
+            <h3>Team </h3>
+        </label>
+        <select id="teams" name="teams">
+            {% for option in teams %}
+            <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+
+</html>

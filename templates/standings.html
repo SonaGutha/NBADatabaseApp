@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body> -->
+    {% include "mainheader.html" %}
+    <div class="container">
+        <span>Standings</span>
+        </div>
+        <div class="container">
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Wins</th>
+                    <th>Loses</th>
+                    <th>Win_Percentage</th>
+                    <th>Road</th>
+                    <th>Last10</th>
+                    <th>Season</th>
+                    <th>Conf</th>
+                    <th>Division</th>
+                    <th>Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for standings in standings %}
+                <tr>
+                    <td>{{ standings[1] }}</td>
+                    <td>{{ standings[2] }}</td>
+                    <td>{{ standings[3] }}</td>
+                    <td>{{ standings[4] }}</td>
+                    <td>{{ standings[5] }}</td>
+                    <td>{{ standings[6] }}</td>
+                    <td>{{ standings[7] }}</td>
+                    <td>{{ standings[8] }}</td>
+                    <td>{{ standings[9] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
